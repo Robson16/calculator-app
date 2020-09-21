@@ -77,12 +77,19 @@ function Calculator() {
     } else if (operator) {
       // If the operator state has been assigned, in a previous action, the calculate function is invoked and
       // the result is saved, than set to the display value and to the fist operand
-      const result = calculate(parseFloat(firstOperand), inputValue, operator);
+      let result = calculate(parseFloat(firstOperand), inputValue, operator);
 
       // To a fixed number of decimal places,
       // combine the parseFloat function with the Number.toFixed method
-      setDisplayValue(String(parseFloat(result.toFixed(7))));
-      setFirstOperand(String(result));
+      result = parseFloat(result.toFixed(7));
+
+      // If any operation would exceed the 8 digit maximum.
+      if (String(result).length > 8) {
+        setDisplayValue("ERR");
+      } else {
+        setDisplayValue(String(result));
+        setFirstOperand(String(result));
+      }
     }
 
     // Set the state to mark that we expect the second operand now
