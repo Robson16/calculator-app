@@ -41,6 +41,16 @@ function Calculator() {
     return secondOperand;
   }
 
+  function handleClear() {
+    if (operator && waitingForSecondOperand) {
+      setOperator("");
+      setWaitingForSecondOperand(false);
+      setDisplayValue(firstOperand);
+    } else {
+      setDisplayValue("0");
+    }
+  }
+
   function handleClearAll() {
     setDisplayValue("0");
     setFirstOperand("");
@@ -107,13 +117,7 @@ function Calculator() {
   return (
     <div className="calculator">
       <Display value={displayValue} />
-      <Button
-        className="button dark"
-        label="C"
-        onClick={() => {
-          alert("Clear");
-        }}
-      />
+      <Button className="button dark" label="C" onClick={handleClear} />
       <Button className="button dark" label="AC" onClick={handleClearAll} />
       <Button
         className="button dark"
