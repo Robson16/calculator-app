@@ -95,9 +95,12 @@ function Calculator() {
       setWaitingForSecondOperand(false);
     } else {
       // Overwrite `displayValue` if the current value is '0' otherwise append to it
-      displayValue === "0"
-        ? setDisplayValue(digit)
-        : setDisplayValue(displayValue + digit);
+      if (displayValue === "0") {
+        setDisplayValue(digit);
+      } else {
+        // Limit up to 8 digits long
+        if (displayValue.length < 8) setDisplayValue(displayValue + digit);
+      }
     }
   }
 
