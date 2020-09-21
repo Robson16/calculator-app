@@ -7,17 +7,12 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+  font-weight: 300;
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #ffffff;
-  background: #667db6;
-  background: -webkit-linear-gradient(
-    to left,
-    #667db6,
-    #0082c8,
-    #0082c8,
-    #667db6
-  );
-  background: linear-gradient(to left, #667db6, #0082c8, #0082c8, #667db6);
+  background-color: #667db6;
+  background: url("../images/mountain.jpg") center center no-repeat;
+  background-size: cover;
 }

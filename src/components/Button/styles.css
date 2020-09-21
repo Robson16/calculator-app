@@ -1,6 +1,7 @@
 :root {
-  --bg-button: #f0f0f0;
-  --border-button: solid 1px #888888;
+  --bg-button: #5f6062;
+  --bg-button-dark: #3f4143;
+  --border-button: 1px solid#2B2D2F;
 }
 
 .button {
@@ -9,6 +10,7 @@
   border: none;
   border-right: var(--border-button);
   border-bottom: var(--border-button);
+  color: #ffffff;
   outline: none;
 }
 
@@ -25,10 +27,17 @@
 }
 
 .button.operation {
-  background-color: #fa8231;
-  color: #ffffff;
+  background-color: #ff9f0c;
 }
 
 .button.operation:active {
-  background-color: #fa8231cc;
+  background-color: #ff9f0ccc;
+}
+
+.button.dark {
+  background-color: var(--bg-button-dark);
+}
+
+.button.dark:active {
+  background-color: var(--bg-button-dark);
 }
