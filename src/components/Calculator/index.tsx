@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import Button from "../Button";
 import Display from "../Display";
@@ -10,15 +10,6 @@ function Calculator() {
   const [firstOperand, setFirstOperand] = useState("");
   const [waitingForSecondOperand, setWaitingForSecondOperand] = useState(false);
   const [operator, setOperator] = useState("");
-
-  // Teste - apagar depois
-  useEffect(() => {
-    console.log("Display: " + displayValue);
-    console.log("First Operand: " + firstOperand);
-    console.log("Waiting Second: " + waitingForSecondOperand);
-    console.log("Operator: " + operator);
-    console.log("------------------------");
-  }, [displayValue, firstOperand, waitingForSecondOperand, operator]);
 
   function calculate(
     firstOperand: number,
