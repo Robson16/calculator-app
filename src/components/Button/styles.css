@@ -1,5 +1,6 @@
 :root {
   --bg-button: #5f6062;
+  --bg-button-light: #747677;
   --bg-button-dark: #3f4143;
   --border-button: 1px solid#2B2D2F;
 }
@@ -15,7 +16,7 @@
 }
 
 .button:active {
-  background-color: #ccc;
+  background-color: var(--bg-button-light);
 }
 
 .button.double {
@@ -39,5 +40,5 @@
 }
 
 .button.dark:active {
-  background-color: var(--bg-button-dark);
+  background-color: var(--bg-button);
 }
