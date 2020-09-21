@@ -121,18 +121,17 @@ function Calculator() {
     }
   }
 
+  function handleChangeSign() {
+    const numberSignChanged = parseFloat(displayValue) * -1;
+    setDisplayValue(String(numberSignChanged));
+  }
+
   return (
     <div className="calculator">
       <Display value={displayValue} />
       <Button className="button dark" label="C" onClick={handleClear} />
       <Button className="button dark" label="AC" onClick={handleClearAll} />
-      <Button
-        className="button dark"
-        label="+/-"
-        onClick={() => {
-          alert("change the sign");
-        }}
-      />
+      <Button className="button dark" label="+/-" onClick={handleChangeSign} />
       <Button
         className="button operation"
         label="/"
