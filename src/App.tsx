@@ -7,7 +7,7 @@ import "./assets/styles/global.css";
 function App() {
   return (
     <>
-      <h1>App Calculadora</h1>
+      <h1>Calculator App</h1>
       <Calculator />
     </>
   );
